@@ -73,7 +73,7 @@ header nav a:hover {
 
 
 main {
-    display: contents;
+    display: contents; /* Allows its children to be treated as direct grid children */
 }
 .main {
     grid-column: 1 / 3;
