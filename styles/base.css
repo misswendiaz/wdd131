@@ -40,6 +40,13 @@ header {
     background-color: var(--nav-bg);
 }
 
+#course-title {
+    font-family: "DM Serif Display", serif;
+    font-weight: 100;
+    font-style: normal;
+    color: var(--text-secondary)
+}
+
 header span {
     font-size: 2rem;
     font-weight: bold;
@@ -152,6 +159,7 @@ img {
 #about-intro {
     grid-column: 2;
     grid-row: 2/4;
+    text-align: justify;
 }
 
 #country-name {
@@ -170,6 +178,7 @@ img {
     grid-column: 2;
     grid-row: 4 / 6;
     align-self: center;
+    text-align: justify;
 }
 
 #resources.card {
@@ -206,8 +215,9 @@ img {
 #resources.card i {
     margin-right: 0.5rem;
     color: var(--accent);
-  }
+}
 
+  
 footer {
     grid-column: 1 / 4;
     grid-row: 3;
