@@ -265,13 +265,13 @@ h1 {
     header nav ul {
         flex-direction: column;
         align-items: center;
-        gap: 1rem; /* spacing between stacked items */
+        gap: 1rem;
       }
 
       main {
         flex-direction: column;
         gap: 2rem;
-        align-items: center; /* optional: center cards when stacked */
+        align-items: center;
       }
 
       #about.card {
