@@ -1,0 +1,156 @@
+:root {
+    --bg-main: #FFF0F5;
+    /* Blush pink */
+    --bg-surface: #FFFFFF;
+    /* White cards */
+    --nav-bg: #E5A4CB;
+    /* Soft rose */
+    --footer-bg: #FADADD;
+    /* Light rose */
+    --text-primary: #4B164C;
+    /* Plum */
+    --text-secondary: #6D4A6D;
+    /* Rose gray */
+    --accent: #C44569;
+    /* Deep rose */ }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto 1fr auto;
+    min-height: 100vh;
+    gap: 1rem;
+}
+
+header {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    padding: 1vh;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 4px solid var(--accent);
+    background-color: var(--nav-bg);
+}
+
+header span {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: var(--accent);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    flex: 1 0 auto; /* flex: [flex-grow] [flex-shrink] [flex-basis]; 
+		in this example, the items will not shrink but can grow to fill the space at natural content width*/
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: justify;
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.5s;
+}
+
+nav a:hover {
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: #a3324c;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.active {
+    color: #C44569;
+}
+
+main {
+    display: contents; /* Allows its children to be treated as direct grid children */
+}
+
+.about {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(200, 100, 150, 0.2);
+    background-color: var(--bg-surface);
+}
+
+.resources {
+    grid-column: 3;
+    grid-row: 2;
+    padding: 2rem;
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(100, 100, 150, 0.2);
+    background-color: var(--bg-surface);
+}
+
+footer {
+    grid-column: 1 / 4;
+    grid-row: 3;
+    padding: 1rem;
+    border-top: 2px solid var(--accent);
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--footer-bg);
+}
+
+h1 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 100;
+    font-style: normal;
+    color: var(--text-primary);
+}
+
+/* Responsive Layout for screens below 768px */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    header {
+        grid-column: 1;
+    }
+
+    .main,
+    .aside,
+    footer {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    } }
