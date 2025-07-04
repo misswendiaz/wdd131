@@ -213,11 +213,13 @@ img {
     transform: translateY(-2px);
 }
 
-#resources.card i {
+.resource-icon {
+    width: 1em;
+    height: 1em;
     margin-right: 0.5rem;
     color: var(--accent);
-}
-
+    vertical-align: middle;
+  }
   
 footer {
     grid-column: 1 / 4;
