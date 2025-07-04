@@ -7,8 +7,8 @@
     --text-secondary: #5C2A5B;
     --text-nav: white;
     --accent: #ff85c2;
-    --shadow-light: 0 4px 12px rgba(201, 76, 116, 0.1); /* soft rose shadow */
-    --shadow-medium: 0 6px 16px rgba(201, 76, 116, 0.35);
+    --shadow-light: 0 2px 2px rgba(201, 76, 116, 0.1);
+    --shadow-medium: 0 2px 2px rgba(201, 76, 116, 0.35);
 
   }
   
@@ -89,7 +89,7 @@ nav a {
 
 nav a:hover {
     border: 1px solid white;
-    border-radius: 2px;
+    border-radius: 8px;
     background-color: #FFF;
     color: var(--nav-bg);
     box-shadow: var(--shadow-medium);
