@@ -5,7 +5,7 @@
     --footer-bg: #FADBE2;
     --text-primary: #2A002D;
     --text-secondary: #5C2A5B;
-    --text-nav: 	white;
+    --text-nav: white;
     --accent: #ff85c2;
     --shadow-light: 0 4px 12px rgba(201, 76, 116, 0.1); /* soft rose shadow */
     --shadow-medium: 0 6px 16px rgba(201, 76, 116, 0.35);
@@ -21,7 +21,6 @@
 
 body {
     font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     display: grid;
