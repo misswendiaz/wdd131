@@ -147,6 +147,8 @@ img {
 }
 
 #about-name {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
     grid-column: 1;
     grid-row: 2;
 }
