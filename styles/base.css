@@ -1,11 +1,12 @@
 :root {
-    --bg-main: #FFF5F8;         /* soft blush pink, slightly brighter for contrast */
-    --bg-surface: #FFFFFF;       /* pure white cards */
-    --nav-bg: #F7A1C4;           /* medium rose pink with better contrast than #E5A4CB */
-    --footer-bg: #FADBE2;        /* soft petal pink, lighter than nav */
-    --text-primary: #3A0A3F;     /* rich plum for better readability */
-    --text-secondary: #5C2A5B;   /* medium rose-gray, more legible than #6D4A6D */
-    --accent: #C94C74;           /* deep rose for buttons/borders/hover */
+    --bg-main: #FFF5F8;
+    --bg-surface: #FFFFFF;
+    --nav-bg: #B0003A;
+    --footer-bg: #FADBE2;
+    --text-primary: #2A002D;
+    --text-secondary: #5C2A5B;
+    --text-nav: 	white;
+    --accent: #ff85c2;
     --shadow-light: 0 4px 12px rgba(201, 76, 116, 0.1); /* soft rose shadow */
     --shadow-medium: 0 6px 16px rgba(201, 76, 116, 0.35);
 
@@ -37,7 +38,7 @@ header {
     display: flex;
     flex-direction: column;
     border-bottom: 4px solid var(--accent);
-    background-color: var(--nav-bg);
+    background-color: var(--accent);
 }
 
 #course-title {
@@ -61,7 +62,7 @@ nav {
     margin-top: 0.5rem;
     padding: 0.5rem;
     border-radius: 4px;
-    background-color: var(--accent);
+    background-color: var(--nav-bg);
 }
 
 nav ul {
@@ -79,7 +80,7 @@ nav ul li {
 
 nav a {
     display: block;
-    color: white;
+    color: var(--text-nav);
     text-align: justify;
     padding: 1rem;
     text-decoration: none;
@@ -90,7 +91,8 @@ nav a {
 nav a:hover {
     border: 1px solid white;
     border-radius: 8px;
-    background-color: #a3324c;
+    background-color: #FFF;
+    color: var(--nav-bg);
     box-shadow: var(--shadow-medium);
     font-weight: bold;
     text-decoration: underline;
