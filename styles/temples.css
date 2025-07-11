@@ -119,7 +119,7 @@ header nav a:focus {
 }
 
 #menu::before {
-    content: "☰ Menu";
+    content: "☰";
 }
 
 #menu.open::before {
