@@ -234,6 +234,7 @@ footer {
 h1 {
     font-family: "DM Serif Display", serif;
     font-weight: 100;
+    font-size: 2rem;
     font-style: normal;
     color: var(--text-primary);
 }
