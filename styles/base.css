@@ -231,7 +231,7 @@ footer {
     background-color: var(--footer-bg);
 }
 
-section h1 {
+section h1, #about-name {
     font-family: "DM Serif Display", serif;
     font-weight: 100;
     font-size: 2rem;
