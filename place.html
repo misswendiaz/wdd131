@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippines</title>
+    <meta name="description" content="This page provides information about the Philippines, including its weather, area, population, capital, languages, currency, time zone, calling code, and internet top-level domain.">
+    <meta name="author" content="Laureen Diaz">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Philippines</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/el-nido-large.webp" media="(min-width: 900px)">
+                <source srcset="images/el-nido-medium.webp" media="(min-width: 600px)">
+                <img src="images/el-nido-small.webp" alt="Alabang Philippines Temple" width="500" height="250">
+            </picture>
+
+            <div class="data">
+                <div class="h2-box">
+                    <h2>Data</h2>
+                </div>
+                <ul class="data-list">
+                    <li><span class="label"><strong>Area:</strong></span> 300,000 km²</li>
+                    <li><span class="label"><strong>Population:</strong></span> 112,729,484</li>
+                    <li><span class="label"><strong>Capital:</strong></span> Manila</li>
+                    <li><span class="label"><strong>Languages:</strong></span> Filipino, English</li>
+                    <li><span class="label"><strong>Currency:</strong></span> Philippine Peso (₱) (PHP)</li>
+                    <li><span class="label"><strong>Time Zone:</strong></span> UTC+8 (PhST)</li>
+                    <li><span class="label"><strong>Calling Code:</strong></span> +63</li>
+                    <li><span class="label"><strong>Internet TLD:</strong></span>.ph</li>
+            </div>
+
+            <div class="weather">
+                <div class="h2-box">
+                    <h2>
+                        <span>Weather</span>
+                        <span id="weather-emoticon">🌦</span>
+                        <img id="svg-weather-icon" src="images/partly-cloudy-with-rain.svg" alt="Partly Cloudy with Rain">
+                    </h2>
+                </div>
+                
+                <ul class="data-list">
+                    <li><span class="label"><strong>Temperature:</strong></span> 29°C</li>
+                    <li>
+                        <span class="label"><strong>Conditions:</strong></span>
+                        <span class="value"> Humid and Partly Cloudy with<br>Afternoon Rain (Wet Season)</span></li>
+                    <li><span class="label"><strong>Wind:</strong></span> 15 km/h</li>
+                    <li><span class="label"><strong>Wind Chill:</strong></span> Negligible (Tropical Climate)</li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; <span id="currentyear"></span> &#10024; Laureen Diaz &#10024; Philippines</p>
+            <p id="lastModified">Last Modified on: </p>
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* ============================
+   THEME: Philippines Flag-Inspired
+   ============================ */
+:root {
+    /* Philippine Flag Colors */
+    --ph-blue: #0038a8;
+    --ph-red: #ce1126;
+    --ph-yellow: #fcd116;
+    --ph-white: #ffffff;
+
+    /* Theme Colors */
+    --color-bg: #f9f9f9;
+    --color-text: #222;
+
+    /* Typography */
+    --font-serif: "Georgia", "Times New Roman", serif;
+    --font-sans: "Inter", "Segoe UI", "Helvetica Neue", sans-serif;
+    --font-size-small: 1rem;
+    --font-size-medium: 1.25rem;
+    --font-size-large: 2rem;
+
+    /* Layout & Spacing */
+    --padding-section: 1rem;
+    --spacing: 0.5rem;
+
+    /* Borders */
+    --border-width: 5px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================
+   GLOBAL STYLES
+   ============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-small);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* ============================
+   HEADER
+   ============================ */
+header {
+    font-family: var(--font-serif);
+    background-color: var(--ph-blue);
+    color: var(--ph-white);
+    padding: var(--padding-section);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-bottom: var(--border-width) solid var(--ph-yellow);
+}
+
+header h1 {
+    font-size: var(--font-size-large);
+}
+
+/* ============================
+   HERO IMAGE
+   ============================ */
+.hero {
+    width: 100vw;
+    position: relative;
+}
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* ============================
+   DATA & WEATHER BOXES
+   ============================ */
+.data,
+.weather {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: var(--padding-section);
+    width: max-content;
+    position:absolute
+}
+
+.data {
+    top: 1rem;
+    left: 2rem;
+}
+
+.weather {
+    bottom: 1rem;
+    right: 2rem;
+}
+
+.h2-box {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing);
+    font-size: var(--font-size-medium);
+    background-color: rgba(255, 249, 230, 0.5);
+}
+
+.data h2,
+.weather h2 {
+    font-family: var(--font-serif);
+    color: var(--ph-red);
+}
+
+li {
+    margin: var(--spacing) 0;
+}
+
+.data-list {
+    list-style: none;
+}
+
+.data-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.2rem 0;
+}
+
+.label {
+    font-weight: bold;
+    min-width: 120px;
+    /* Adjust width as needed */
+    text-align: right;
+    white-space: nowrap;
+}
+
+.value {
+    line-height: 1.3;
+}
+
+/* ============================
+   WEATHER ICONS
+   ============================ */
+#weather-emoticon {
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+    font-size: 2.5rem;
+    display: inline;
+}
+
+#svg-weather-icon {
+    width: 40px;
+    vertical-align: middle;
+    display: none;
+}
+
+@media (max-width: 600px) {
+    #weather-emoticon {
+        display: none;
+    }
+
+    #svg-weather-icon {
+        display: inline;
+        width: 100px;
+    }
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+    background-color: var(--ph-red);
+    border-top: var(--border-width) solid var(--ph-yellow);
+    color: var(--ph-white);
+    text-align: center;
+    padding: var(--padding-section);
+    width: 100%;
+}
+
+footer p {
+    margin: var(--spacing) 0;
+}
