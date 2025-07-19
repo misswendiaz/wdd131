@@ -35,15 +35,13 @@
                     <li><span class="label"><strong>Time Zone:</strong></span> UTC+8 (PhST)</li>
                     <li><span class="label"><strong>Calling Code:</strong></span> +63</li>
                     <li><span class="label"><strong>Internet TLD:</strong></span>.ph</li>
+                </ul>
             </div>
 
             <div class="weather">
                 <div class="h2-box">
-                    <h2>
-                        <span>Weather</span>
-                        <span id="weather-emoticon">🌦</span>
-                        <img id="svg-weather-icon" src="images/partly-cloudy-with-rain.svg" alt="Partly Cloudy with Rain">
-                    </h2>
+                    <h2 class="weather-heading">Weather</h2>
+                    <img class="weather-svg" src="images/partly-cloudy-with-rain.svg" alt="Partly Cloudy with Rain Icon">
                 </div>
                 
                 <ul class="data-list">
@@ -52,14 +50,14 @@
                         <span class="label"><strong>Conditions:</strong></span>
                         <span class="value"> Humid and Partly Cloudy with<br>Afternoon Rain (Wet Season)</span></li>
                     <li><span class="label"><strong>Wind:</strong></span> 15 km/h</li>
-                    <li><span class="label"><strong>Wind Chill:</strong></span> Negligible (Tropical Climate)</li>
+                    <li><span class="label"><strong>Wind Chill:</strong></span><span id="wind-chill"></span></li>
                 </ul>
             </div>
         </div>
-        <footer>
-            <p>&copy; <span id="currentyear"></span> &#10024; Laureen Diaz &#10024; Philippines</p>
-            <p id="lastModified">Last Modified on: </p>
-        </footer>
     </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> &#10024; Laureen Diaz &#10024; Philippines</p>
+        <p id="lastModified">Last Modified on: </p>
+    </footer>
 </body>
 </html>
