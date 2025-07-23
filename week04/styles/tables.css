@@ -1,0 +1,47 @@
+:root {
+    --table-border-color: gray;
+    --table-header-bg-color1: black;
+    --table-header-bg-color2: darkgray;
+    --table-header-text-color: white;
+    --table-row-bg-color1: #fff;
+    --table-row-bg-color2: lightgray;
+    --table-row-text-color: black;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    margin: 10px auto;
+    border: 1px solid var(--table-border-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+    color: black;
+    font-family: "Arial Narrow", sans-serif;
+}
+
+.highlight {
+    background-color: var(--table-header-bg-color1);
+    color: var(--table-header-text-color);
+}
+
+#header {
+    background-color: var(--table-header-bg-color2);
+    color: var(--table-header-text-color);
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid var(--table-border-color);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--table-row-bg-color2);
+}
