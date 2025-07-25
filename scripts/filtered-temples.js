@@ -104,20 +104,20 @@ const temples = [
         "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manila-philippines/400x250/manila-philippines-temple-lds-129585-wallpaper.jpg"
     },
     {
-        templeName: "Cebu City Philippines",
-        location: "Cebu City, Philippines",
-        dedicated: "2007, November, 14",
-        area: 29556,
+        templeName: "Seoul Korea",
+        location: "Seoul, South Korea",
+        dedicated: "1983, May, 9",
+        area: 28057,
         imageUrl:
-        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/cebu-city-philippines/400x640/cebu-philippines-temple-lds-852643-wallpaper.jpg"
+        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/seoul-korea/800x500/seoul-korea-temple-lds-424784-wallpaper.jpg"
     },
     {
-        templeName: "Salt Lake",
-        location: "Salt Lake City, Utah",
-        dedicated: "1953, February, 14",
-        area: 387207,
+        templeName: "Brisbane Australia",
+        location: "Queensland, Australia",
+        dedicated: "2001, May, 26",
+        area: 10700,
         imageUrl:
-        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/2018/400x640/slctemple6.jpg"
+        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/brisbane-australia/320x200/brisbane-australia-temple-lds-901526-wallpaper.jpg"
       }
 ]
 
