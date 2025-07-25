@@ -150,6 +150,7 @@ main {
     padding: 1.5rem;
     max-width: 800px;
     margin: 0 auto;
+    min-height: 100vh;
 }
 
 main h2 {
@@ -180,6 +181,15 @@ main h2 {
     padding: 1rem;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    min-height: 300px;
+}
+
+.templeCard img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: var(--secondary-bg);
+    border-radius: var(--radius);
 }
 
 .templeCard:hover {
