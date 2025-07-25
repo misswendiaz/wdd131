@@ -162,13 +162,29 @@ main h2 {
     gap: 1.5rem;
     padding: 1rem 0;
     max-width: 100%;
-    background-color: var(--card-bg);
+    background-color: var(--secondary-bg);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     overflow: hidden;
     text-align: left;
     padding: 1rem;
     transition: var(--transition);
+    border-radius: var(--radius);
+}
+
+
+.templeCard {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.templeCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 #templeCards img {
