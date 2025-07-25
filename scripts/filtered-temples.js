@@ -124,7 +124,7 @@ const temples = [
 // Create temple cards and display them on the page
 function createTempleCards(temples) {
     return temples.map(temple => {
-        return `<div class="temple-card">
+        return `<div class="templeCards">
                     <h3>${temple.templeName}</h3>
                     <p>Located: ${temple.location}</p>
                     <p>Dedicated: ${temple.dedicated}</p>
