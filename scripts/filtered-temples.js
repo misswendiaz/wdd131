@@ -129,7 +129,7 @@ function createTempleCards(temples) {
                     <p>Located: ${temple.location}</p>
                     <p>Dedicated: ${temple.dedicated}</p>
                     <p>Size: ${temple.area} sq ft</p>
-                    <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+                    <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="800" height="400">
                 </div>`;
     }).join("");
 }
@@ -138,16 +138,72 @@ function createTempleCards(temples) {
 document.getElementById("templeCards").innerHTML = createTempleCards(temples);
 
 
-// Filter temples based on dedication year
-function filterTemplesByYear(year) {
-    return temples.filter(temple => {
-        const dedicationYear = parseInt(temple.dedicated.split(",")[0]);
-        return dedicationYear === year;
-    });
+// Add event listener for the "Home" button to show all the temples
+document.getElementById("Home").addEventListener("click", (e) => {
+  e.preventDefault(); // prevent anchor default behavior
+    getAllTemples();
+});
+
+// Show all temples
+function getAllTemples() {
+  document.getElementById("templeCards").innerHTML = createTempleCards(temples);
+  document.getElementById("filter").innerHTML = `Home`
 }
 
+// Add event listener for the "Old" button to filter temples dedicated before 1900
+document.getElementById("Old").addEventListener("click", (e) => {
+  e.preventDefault(); // prevent anchor default behavior
+    getOldTemples(1900);
+});
+
 // Filter temples dedicated before 1900
-function getOldTemples(year) {
-    const oldTemples = filterTemplesByYear(year);
-    document.getElementById("templeCards").innerHTML = createTempleCards(oldTemples);
+function getOldTemples() {
+  const oldTemples = temples.filter(temple => {
+    const dedicationYear = parseInt(temple.dedicated.split(",")[0]);
+    return dedicationYear < 1900;
+  });
+  document.getElementById("templeCards").innerHTML = createTempleCards(oldTemples);
+  document.getElementById("filter").innerHTML = `Old`
+}
+
+// Add event listener for the "New" button to filter temples dedicated after 2000
+document.getElementById("New").addEventListener("click", (e) => {
+  e.preventDefault(); // prevent anchor default behavior
+    getNewTemples(2000);
+});
+
+// Filter temples dedicated after 2000
+function getNewTemples() {
+  const newTemples = temples.filter(temple => {
+    const dedicationYear = parseInt(temple.dedicated.split(",")[0]);
+    return dedicationYear > 2000;
+  });
+  document.getElementById("templeCards").innerHTML = createTempleCards(newTemples);
+  document.getElementById("filter").innerHTML = `New`
+}
+
+// Add event listener for the "Large" button to filter temples with area larger than 90,000 square feet
+document.getElementById("Large").addEventListener("click", (e) => {
+  e.preventDefault(); // prevent anchor default behavior
+    getLargeTemples(90000);
+});
+
+// Filter temples with area larger than 90,000 square feet
+function getLargeTemples() {
+  const largeTemples = temples.filter(temple => temple.area > 90000);
+  document.getElementById("templeCards").innerHTML = createTempleCards(largeTemples);
+  document.getElementById("filter").innerHTML = `Large`
+}
+
+// Add event listener for the "Small" button to filter temples with area smaller than 10,000 square feet
+document.getElementById("Small").addEventListener("click", (e) => {
+  e.preventDefault(); // prevent anchor default behavior
+    getSmallTemples(10000);
+});
+
+// Filter temples with area larger than 90,000 square feet
+function getSmallTemples() {
+  const smallTemples = temples.filter(temple => temple.area < 10000);
+  document.getElementById("templeCards").innerHTML = createTempleCards(smallTemples);
+  document.getElementById("filter").innerHTML = `Small`
 }
