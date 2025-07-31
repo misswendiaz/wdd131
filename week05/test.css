@@ -1,0 +1,288 @@
+/* ============================
+   TutorTracker Global Styles
+   ============================ */
+
+/* 🎨 Color & Font Theme */
+:root {
+    /* Fonts */
+    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Merriweather', serif;
+    --font-mono: 'Fira Mono', monospace;
+
+    /* Academic + Productivity Palette */
+    --primary-color: #3F51B5;
+    /* Indigo 500 */
+    --secondary-color: #8BC34A;
+    /* Lime Green 400 */
+    --error-color: #F44336;
+    /* Coral Red */
+    --info-color: #009688;
+    /* Rich Teal */
+    --accent-color: #FFCA28;
+    /* Goldenrod */
+
+    /* Text */
+    --text-primary: #333333;
+    /* Charcoal Gray */
+    --text-secondary: #666666;
+    /* Slate Gray */
+
+    /* Backgrounds */
+    --bg-main: #F5F5F5;
+    /* Whisper Gray */
+    --bg-surface: #FFFFFF;
+    /* White */
+
+    /* UI Helpers */
+    --border-radius: 6px;
+    --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    --transition: 0.3s ease;
+}
+
+/* ============================
+   Base Resets & Typography
+   ============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+main.page {
+    background-color: var(--bg-main);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* ============================
+   Navigation Bar
+   ============================ */
+nav {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: bold;
+    transition: opacity var(--transition);
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* ============================
+   Container & Layout
+   ============================ */
+.container {
+    background-color: var(--bg-surface);
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* ============================
+   Buttons
+   ============================ */
+button,
+.btn {
+    padding: 0.6rem 1.25rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #689F38;
+}
+
+.btn-secondary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #303F9F;
+}
+
+.btn-danger {
+    background-color: var(--error-color);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #d32f2f;
+}
+
+.btn-info {
+    background-color: var(--info-color);
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: #00796B;
+}
+
+/* ============================
+   Forms
+   ============================ */
+form {
+    margin-top: 1rem;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ============================
+   Tables
+   ============================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: var(--bg-surface);
+    box-shadow: var(--shadow);
+}
+
+th,
+td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* ============================
+   Typography Helpers
+   ============================ */
+.mono {
+    font-family: var(--font-mono);
+    background: #eef;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.status-paid {
+    color: green;
+    font-weight: bold;
+}
+
+.status-unpaid {
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background-color: var(--bg-surface);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
