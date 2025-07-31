@@ -120,7 +120,7 @@ main.page {
     border-radius: var(--border-radius);
     background-color: var(--bg-surface);
     padding: 1rem;
-    margin: 2rem;
+    margin: 2rem 0;
 }
 
 #wireframe h2 {
