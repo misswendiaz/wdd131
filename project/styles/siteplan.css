@@ -120,6 +120,7 @@ main.page {
     border-radius: var(--border-radius);
     background-color: var(--bg-surface);
     padding: 1rem;
+    margin: 2rem;
 }
 
 #wireframe h2 {
@@ -136,14 +137,6 @@ main.page {
     padding: 1rem;
     min-height: 300px;
     border-radius: var(--border-radius);
-}
-
-#wireframe .large {
-    background-color: var(--info-color);
-}
-
-#wireframe .mobile {
-    background-color: var(--secondary-color);
 }
 
 /* ============================
@@ -170,10 +163,6 @@ figcaption {
     text-align: center;
     font-size: 0.9rem;
     color: var(--text-primary);
-}
-
-#wireframe .large figcaption {
-    color: whitesmoke;
 }
 
 /* ============================
