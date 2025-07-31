@@ -1,39 +1,28 @@
-/* 🎨 Color & Font Theme */
+/* ============================
+   🎨 Color & Font Theme
+   ============================ */
 :root {
-    /* Fonts */
     --font-body: 'Inter', sans-serif;
     --font-heading: 'Merriweather', serif;
 
-    /* Academic + Productivity Palette */
     --primary-color: #3F51B5;
-    /* Indigo 500 */
     --secondary-color: #8BC34A;
-    /* Lime Green 400 */
-    --error-color: #F44336;
-    /* Coral Red */
     --info-color: #009688;
-    /* Rich Teal */
+    --accent-color: #FFCA28;
 
-    /* Text */
     --text-primary: #333333;
-    /* Charcoal Gray */
     --text-secondary: #666666;
-    /* Slate Gray */
 
-    /* Backgrounds */
     --bg-main: #F5F5F5;
-    /* Whisper Gray */
     --bg-surface: #FFFFFF;
-    /* White */
 
-    /* UI Helpers */
     --border-radius: 6px;
     --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     --transition: 0.3s ease;
 }
 
 /* ============================
-   Base Resets & Typography
+   🔄 Base Reset & Typography
    ============================ */
 * {
     margin: 0;
@@ -46,8 +35,6 @@ body {
     background-color: var(--bg-main);
     color: var(--text-primary);
     line-height: 1.6;
-    padding: 0;
-    margin: 0;
 }
 
 h1,
@@ -58,12 +45,12 @@ h3 {
     margin-bottom: 0.5rem;
 }
 
-h3 {
-    color: var(--text-primary);
-}
-
 h1 {
     text-align: center;
+}
+
+h3 {
+    color: var(--text-primary);
 }
 
 p {
@@ -77,7 +64,7 @@ main.page {
 }
 
 /* ============================
-   Container & Layout
+   📦 Layout & Containers
    ============================ */
 .container {
     background-color: var(--bg-surface);
@@ -87,6 +74,9 @@ main.page {
     box-shadow: var(--shadow);
 }
 
+/* ============================
+   🧱 Theme Grid
+   ============================ */
 .theme-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -119,15 +109,17 @@ main.page {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* ============================
+   🖼️ Wireframes Section
+   ============================ */
 #wireframe {
-    width: 100%;
-    height: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
     border: 1px solid #ddd;
     border-radius: var(--border-radius);
     background-color: var(--bg-surface);
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto auto 1fr;
+    padding: 1rem;
 }
 
 #wireframe h2 {
@@ -136,31 +128,42 @@ main.page {
     margin-bottom: 1rem;
 }
 
-#wireframe .large {
-    grid-row: 2/3;
-    grid-column: 1/2;
+#wireframe .large,
+#wireframe .mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 1rem;
-    margin: auto;
-    background-color: var(--info-color);
+    min-height: 300px;
     border-radius: var(--border-radius);
 }
 
-
+#wireframe .large {
+    background-color: var(--info-color);
+}
 
 #wireframe .mobile {
-    grid-row: 2/3;
-    grid-column: 2/3;
-    padding: 1rem;
-    margin: auto;
     background-color: var(--secondary-color);
-    border-radius: var(--border-radius);
 }
 
+/* ============================
+   🖼️ Images & Captions Centered
+   ============================ */
 figure {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    /* Vertical centering */
+    height: 100%;
     margin: 0;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
 }
 
 figcaption {
@@ -170,6 +173,30 @@ figcaption {
     color: var(--text-primary);
 }
 
-.large figcaption {
-    color: whitesmoke
+/* ============================
+   📱 Responsive Layout
+   ============================ */
+@media (max-width: 768px) {
+    .theme-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #wireframe {
+        grid-template-columns: 1fr;
+    }
+
+    #wireframe .large,
+    #wireframe .mobile {
+        grid-column: 1 / -1;
+        margin: 1rem 0;
+    }
+
+    .container {
+        margin: 1rem 0;
+        padding: 1.5rem;
+    }
+
+    #wireframe img {
+        width: 100%;
+    }
 }
