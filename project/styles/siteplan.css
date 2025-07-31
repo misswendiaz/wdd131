@@ -3,7 +3,6 @@
     /* Fonts */
     --font-body: 'Inter', sans-serif;
     --font-heading: 'Merriweather', serif;
-    --font-mono: 'Fira Mono', monospace;
 
     /* Academic + Productivity Palette */
     --primary-color: #3F51B5;
@@ -14,8 +13,6 @@
     /* Coral Red */
     --info-color: #009688;
     /* Rich Teal */
-    --accent-color: #FFCA28;
-    /* Goldenrod */
 
     /* Text */
     --text-primary: #333333;
