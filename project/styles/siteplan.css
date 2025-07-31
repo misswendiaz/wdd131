@@ -172,6 +172,10 @@ figcaption {
     color: var(--text-primary);
 }
 
+#wireframe .large figcaption {
+    color: whitesmoke;
+}
+
 /* ============================
    📱 Responsive Layout
    ============================ */
