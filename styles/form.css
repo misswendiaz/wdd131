@@ -118,7 +118,6 @@ input[type="checkbox"] {
     accent-color: var(--color-teal);
     transform: scale(1.2);
     margin-right: 0.4rem;
-    vertical-align: middle;
 }
 
 fieldset label {
