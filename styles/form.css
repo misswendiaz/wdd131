@@ -216,12 +216,16 @@ input[type="submit"]:hover {
 
 /* === FOOTER === */
 footer {
+    max-width: 700px;
+    margin: 2rem auto 0 auto;
+    /* Top margin only; centered horizontally */
     background-color: #111;
-    /* or rgba(0, 0, 0, 0.7) */
     color: #ffffff;
-    padding: 1.5rem;
     text-align: center;
-    margin: 2rem;
+    border: 1px solid #00ffc3;
+    box-shadow: 0 0 12px #00ffc3aa;
+    border-radius: 8px;
+    padding: 1rem;
 }
 
 footer p {
