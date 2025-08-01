@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description" content="This page demonstrates a good form design, given specific field requirements.">
+    <meta name="author" content="Laureen Diaz">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Product Review</h1>
+        <form action="get" action="review.html" class="form">
+
+            <label>Product Name*
+                <select name="options" id="options" required>
+                    <option value="" disabled selected>Select a Product...</option>
+                </select>
+            </label>
+
+            <fieldset>
+                <legend>Overall Rating*</legend>
+                <div class="star-rating">
+                    <label><input type="radio" name="stars" value="1 star" required><span>★</span></label>
+                    <label><input type="radio" name="stars" value="2 stars"><span>★★</span></label>
+                    <label><input type="radio" name="stars" value="3 stars"><span>★★★</span></label>
+                    <label><input type="radio" name="stars" value="4 stars"><span>★★★★</span></label>
+                    <label><input type="radio" name="stars" value="5 stars"><span>★★★★★</span></label>
+                </div>
+            </fieldset>
+
+
+
+            <label>Date of Installation <input id="install" type="date" name="installation date" value="installation date" required></label>
+
+            <fieldset>
+                <legend>Useful Features</legend>
+                <label><input id="features" type="checkbox" name="durability" value="yes">Durability</label>
+                <label><input id="features" type="checkbox" name="ease" value="yes">Ease of Use</label>
+                <label><input id="features" type="checkbox" name="performance" value="yes">Performance</label>
+                <label><input id="features" type="checkbox" name="design" value="yes">Design</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Written Review</legend>
+                <input id="feedback" type="text area" name="feedback" placeholder="Type your feedback here.">
+            </fieldset>
+
+            <label>User Name (Optional)<input id="name" type="text" name="name"></label>
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> &#10024; Laureen Diaz &#10024; Philippines</p>
+        <p id="lastModified">Last Modified on: </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,224 @@
+/* === RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+    background: radial-gradient(circle at top left, #2c3e50, #000000);
+    color: #f0f0f0;
+    line-height: 1.6;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #00ffc3aa;
+    backdrop-filter: blur(6px);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #00ffc3;
+    font-size: 2rem;
+}
+
+/* === FORM STYLES === */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Inputs & Selects */
+input[type="text"],
+input[type="date"],
+input[type="text area"],
+select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #00ffc3;
+    border-radius: 6px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: inherit;
+    min-height: 44px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #50ffd3;
+    box-shadow: 0 0 6px #00ffc3;
+}
+
+/* === FIELDSETS === */
+fieldset {
+    border: 1px solid #00ffc3;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+legend {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00ffc3;
+    padding: 0 0.5rem;
+}
+
+/* Radio & Checkbox Styling */
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #00ffc3;
+    transform: scale(1.2);
+    margin-right: 0.4rem;
+    vertical-align: middle;
+}
+
+/* Inline Labels for Rating and Features */
+fieldset label {
+    display: block;
+    margin: 0.4rem 1rem 0.4rem 0;
+    cursor: pointer;
+}
+
+
+/* === TIGHTEN STAR RATING SPACING === */
+.star-rating {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    /* smaller vertical gap */
+    margin-top: 0.5rem;
+}
+
+.star-rating label {
+    margin: 0;
+    /* remove excess spacing */
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.star-rating label:hover {
+    background-color: rgba(0, 255, 195, 0.1);
+    transform: translateX(4px);
+}
+
+/* === STAR GLOW ON SELECTED RATING === */
+input[type="radio"]:checked+label,
+label:has(input[type="radio"]:checked) {
+    color: #00ffc3;
+    text-shadow: 0 0 5px #00ffc3, 0 0 10px #00ffc3;
+}
+
+.form input[type="radio"] {
+    margin: 6px;
+}
+
+/* === CUSTOM CHECKBOX STYLING === */
+input[type="checkbox"] {
+    appearance: none;
+    width: 1.2em;
+    height: 1.2em;
+    border: 2px solid #00ffc3;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #00ffc3;
+    box-shadow: 0 0 5px #00ffc3;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✔";
+    position: absolute;
+    left: 0.25em;
+    top: -0.1em;
+    font-size: 1em;
+    color: #000;
+}
+
+/* === WRITTEN REVIEW === */
+#feedback {
+    height: 200px;
+}
+
+/* === SUBMIT BUTTON === */
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: #00ffc3;
+    color: #000;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+input[type="submit"]:hover {
+    background-color: #50ffd3;
+    box-shadow: 0 0 10px #00ffc3;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* === RESPONSIVE BREAKPOINTS === */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="submit"] {
+        font-size: 1rem;
+        padding: 0.65rem;
+    }
+}
