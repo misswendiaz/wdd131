@@ -115,7 +115,7 @@ fieldset label {
 }
 
 
-/* === TIGHTEN STAR RATING SPACING === */
+/* === STAR RATING SPACING === */
 .star-rating {
     display: flex;
     flex-direction: column;
@@ -139,8 +139,7 @@ fieldset label {
     background-color: rgba(0, 255, 195, 0.1);
     transform: translateX(4px);
 }
-
-/* === STAR GLOW ON SELECTED RATING === */
+/* glow */
 input[type="radio"]:checked+label,
 label:has(input[type="radio"]:checked) {
     color: #00ffc3;
@@ -181,8 +180,16 @@ input[type="checkbox"]:checked::after {
 }
 
 /* === WRITTEN REVIEW === */
-#feedback {
-    height: 200px;
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #00ffc3;
+    border-radius: 6px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: inherit;
+    min-height: 120px;
+    resize: vertical;
 }
 
 /* === SUBMIT BUTTON === */
