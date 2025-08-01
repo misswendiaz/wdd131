@@ -216,14 +216,17 @@ input[type="submit"]:hover {
 
 /* === FOOTER === */
 footer {
+    background-color: #111;
+    /* or rgba(0, 0, 0, 0.7) */
+    color: #ffffff;
+    padding: 1.5rem;
     text-align: center;
-    margin-top: 3rem;
-    font-size: 0.9rem;
-    color: white;
+    margin: 2rem;
 }
 
 footer p {
     margin: 0.5rem 0;
+    text-shadow: 1px 1px 2px #000;
 }
 
 /* === RESPONSIVE BREAKPOINTS === */
