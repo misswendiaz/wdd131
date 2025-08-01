@@ -1,3 +1,18 @@
+/* === GLOBAL VARIABLES === */
+:root {
+    --color-teal: #00ffc3;
+    --color-teal-light: #50ffd3;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray: #aaa;
+    --color-dark: #1e1e1e;
+
+    --font-main: 'Share Tech Mono', monospace;
+    --box-shadow-glow: 0 0 12px var(--color-teal);
+    --border-radius: 8px;
+    --max-width: 700px;
+}
+
 /* === RESET & BASE === */
 * {
     margin: 0;
@@ -6,21 +21,21 @@
 }
 
 body {
-    font-family: 'Share Tech Mono', monospace;
-    background: radial-gradient(circle at top left, #2c3e50, #000000);
-    color: #f0f0f0;
+    font-family: var(--font-main);
+    background: radial-gradient(circle at top left, #2c3e50, var(--color-black));
+    color: var(--color-white);
     line-height: 1.6;
     padding: 2rem;
     min-height: 100vh;
 }
 
 main {
-    max-width: 700px;
+    max-width: var(--max-width);
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.05);
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 0 12px #00ffc3aa;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-glow);
     backdrop-filter: blur(6px);
 }
 
@@ -28,7 +43,7 @@ main {
 h1 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #00ffc3;
+    color: var(--color-teal);
     font-size: 1.8rem;
 }
 
@@ -42,29 +57,35 @@ h1 {
 
 #entries p {
     background-color: rgba(0, 255, 195, 0.05);
-    border-left: 4px solid #00ffc3;
+    border-left: 4px solid var(--color-teal);
     padding: 1rem;
-    border-radius: 6px;
-    color: #e0e0e0;
+    border-radius: var(--border-radius);
+    color: var(--color-white);
     font-size: 1rem;
-    box-shadow: 0 0 4px #00ffc3aa;
+    box-shadow: 0 0 4px var(--color-teal);
     transition: background-color 0.3s ease;
 }
 
 #entries p strong {
-    color: #00ffc3;
+    color: var(--color-teal);
 }
 
 /* === FOOTER === */
 footer {
+    max-width: var(--max-width);
+    margin: 2rem auto 0 auto;
+    background-color: #111;
+    color: var(--color-white);
     text-align: center;
-    margin-top: 3rem;
-    font-size: 0.9rem;
-    color: #aaa;
+    border: 1px solid var(--color-teal);
+    box-shadow: var(--box-shadow-glow);
+    border-radius: var(--border-radius);
+    padding: 1rem;
 }
 
 footer p {
     margin: 0.5rem 0;
+    text-shadow: 1px 1px 2px var(--color-black);
 }
 
 /* === RESPONSIVE === */
