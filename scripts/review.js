@@ -53,7 +53,7 @@ if (features.length > 0) {
     const p = document.createElement("p");
     p.innerHTML = `<strong>Useful Features:</strong> ${features.join(", ")}`;
     summary.appendChild(p);
-});
+};
 
 
 
