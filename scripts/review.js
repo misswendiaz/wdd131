@@ -1,81 +1,82 @@
 // === FOOTER DATE AND TIME ===
 
-// Get the current year
+// Get the current year using JavaScript's Date object
 const currentYear = new Date().getFullYear();
 
-// Insert the current year into the footer
+// Insert the current year into the span with ID "currentyear"
 document.getElementById("currentyear").textContent = currentYear;
 
-// Get last modified date of the document
+// Get the last modified timestamp of the HTML document
 const rawDate = new Date(document.lastModified);
 
-// Format the last modified date as full date and 24-hour time
+// Create a date formatter for full date and long 24-hour time (no AM/PM)
 const formatter = new Intl.DateTimeFormat("en-US", {
-    dateStyle: "full",
-    timeStyle: "long",
-    hour12: false
+    dateStyle: "full",   // e.g., Friday, August 1, 2025
+    timeStyle: "long",   // e.g., 15:27:33 GMT+8
+    hour12: false        // use 24-hour format
 });
 
-// Format and display the last modified date
+// Format the raw modified date and display it in the "lastModified" paragraph
 const formattedDate = formatter.format(rawDate);
 document.getElementById("lastModified").textContent += formattedDate;
 
-
-
-
-
 // === DISPLAY FORM ENTRIES ===
 
-// Parse submitted form data from query string
+// Read the URL query string (e.g., ?name=John&feedback=Nice)
 const params = new URLSearchParams(window.location.search);
 
-// Grab the container for entries display
+// Get the <div id="entries"> to display the form data
 const summary = document.getElementById("entries");
 
-// Array to collect checked checkbox features
+// Collect selected features in this array (durability, ease, etc.)
 const features = [];
 
-// Loop through each form field
+// Loop through each key-value pair in the query string
 params.forEach((value, key) => {
-    // Handle grouped checkboxes
-    if (key === "durability" || key === "ease" || key === "performance" || key === "design") {
-        features.push(value);
+    // If the key is one of the feature checkboxes, collect it in the array
+    if (["durability", "ease", "performance", "design"].includes(key)) {
+        features.push(key); // Store the key (not value) to show the feature name
     } else {
-        // Display each form field as a paragraph
+        // Otherwise, create a <p> tag to show the field
         const p = document.createElement("p");
-        p.innerHTML = `<strong>${key}:</strong> ${value}`;
+        p.innerHTML = `<strong>${toTitleCase(key)}:</strong> ${value}`;
         summary.appendChild(p);
     }
 });
 
-// Display grouped features (if any)
+// If any feature was selected, display them as a single entry
 if (features.length > 0) {
     const p = document.createElement("p");
     p.innerHTML = `<strong>Useful Features:</strong> ${features.join(", ")}`;
     summary.appendChild(p);
-};
-
-
-
-
+}
 
 // === LOCALSTORAGE REVIEW COUNTER ===
 
-// Get current review count from localStorage
+// Try to get the existing review count from localStorage
 let reviewCount = localStorage.getItem("reviewCount");
 
-// Initialize if not set yet
-if (!reviewCount) {
-    reviewCount = 0;
-}
+// If nothing is found yet, initialize it to 0
+if (!reviewCount) reviewCount = 0;
 
-// Increment count
+// Increment the count by 1
 reviewCount = Number(reviewCount) + 1;
 
-// Save updated count
+// Save the updated count back to localStorage
 localStorage.setItem("reviewCount", reviewCount);
 
-// Show review count at the top of the summary
+// Display the count at the top of the review summary
 const counterDisplay = document.createElement("p");
 counterDisplay.innerHTML = `<strong>You’ve submitted ${reviewCount} review${reviewCount !== 1 ? "s" : ""}!</strong>`;
 summary.prepend(counterDisplay);
+
+// === HELPER FUNCTION ===
+// Converts camelCase or snake_case to a more readable Title Case
+function toTitleCase(str) {
+    return str
+        .replace(/([A-Z])/g, " $1")              // add space before capital letters
+        .replace(/[_\-]/g, " ")                  // replace underscores or dashes with space
+        .replace(/\w\S*/g, txt =>                // capitalize first letter of each word
+            txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+        );
+}
