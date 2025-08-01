@@ -1,0 +1,87 @@
+/* === RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+    background: radial-gradient(circle at top left, #2c3e50, #000000);
+    color: #f0f0f0;
+    line-height: 1.6;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #00ffc3aa;
+    backdrop-filter: blur(6px);
+}
+
+/* === HEADINGS === */
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #00ffc3;
+    font-size: 1.8rem;
+}
+
+/* === ENTRIES DISPLAY === */
+#entries {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#entries p {
+    background-color: rgba(0, 255, 195, 0.05);
+    border-left: 4px solid #00ffc3;
+    padding: 1rem;
+    border-radius: 6px;
+    color: #e0e0e0;
+    font-size: 1rem;
+    box-shadow: 0 0 4px #00ffc3aa;
+    transition: background-color 0.3s ease;
+}
+
+#entries p strong {
+    color: #00ffc3;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #entries p {
+        font-size: 0.95rem;
+    }
+}

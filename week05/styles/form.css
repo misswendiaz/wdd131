@@ -57,6 +57,7 @@ select {
     color: #ffffff;
     font-family: inherit;
     min-height: 44px;
+    cursor: pointer;
 }
 
 input:focus,
@@ -66,6 +67,21 @@ textarea:focus {
     border-color: #50ffd3;
     box-shadow: 0 0 6px #00ffc3;
 }
+
+/* === REQUIRED FIELD BORDER FEEDBACK === */
+
+/* Default: thick border to signal required, uses high-contrast amber */
+.form input:required {
+    border-bottom: solid 6px #ffc107;
+    /* Amber (AAA on dark) */
+}
+
+/* Valid: border changes to teal/blue that contrasts and avoids red/green issues */
+.form input:required:valid {
+    border-bottom: solid 6px #00e6e6;
+    /* Light teal (high contrast) */
+}
+
 
 /* === FIELDSETS === */
 fieldset {
