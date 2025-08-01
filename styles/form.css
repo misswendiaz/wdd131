@@ -104,11 +104,11 @@ fieldset {
 legend {
     font-size: 1rem;
     font-weight: bold;
-    /* color: var(--color-white); */
-    color: #50ffd3;
+    color: var(--color-white);
+    /* color: #50ffd3; */
     padding: 0 0.5rem;
-    /* text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); */
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+    /* text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); */
 }
 
 
