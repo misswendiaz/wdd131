@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutor Buddy | Sessions</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Inter:opsz@14..32&family=Merriweather:opsz@18..144&display=swap"
+        rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="test2.css" />
+    <link rel="icon" href="data:," />
+    
+    <!--JavaScript-->
+    <script src="test2.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header (reuse from home page) -->
+    <header>
+        <div class="header-inner">
+            <div class="header-flex">
+                <div class="logo-tag-line">
+                    <img src="images/logo.webp" alt="Tutor Buddy Logo" />
+                    <div class="tag-line-text">
+                        <h1>Tutor Buddy</h1>
+                        <p>Your smart helper.</p>
+                    </div>
+                </div>
+                <nav class="nav-container">
+                    <button class="hamburger" aria-label="Toggle Menu">&#9776;</button>
+                    <ul class="nav-links">
+                        <li><a href="tutor-buddy-home.html">Home</a></li>
+                        <li><a href="sessions.html">Sessions</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <!-- Add/Edit Session Form -->
+            <section id="session-form-section">
+                <h2>Add / Edit Session</h2>
+                <form id="session-form">
+                    <label>Student Name:
+                        <input type="text" id="studentName" required>
+                    </label>
+                    <label>Subject:
+                        <input type="text" id="subject" required>
+                    </label>
+                    <label>Topic Covered:
+                        <input type="text" id="topic" required>
+                    </label>
+                    <label>Grade Level:
+                        <select id="grade">
+                            <option value="elementary">Grade 1–3</option>
+                            <option value="middle">Grade 4–6</option>
+                            <option value="high">High School</option>
+                            <option value="college">College</option>
+                        </select>
+                    </label>
+                    <div class="time-select">
+                        <label>Start:
+                            <input type="time" id="startTime" required>
+                        </label>
+                        <label>End:
+                            <input type="time" id="endTime" required>
+                        </label>
+                    </div>
+                    <label>Feedback:
+                        <textarea id="feedback" placeholder="Optional notes"></textarea>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="isPaid">
+                        Mark as Paid
+                    </label>
+                    <input type="hidden" id="editIndex">
+                    <button type="submit" class="button" id="submitBtn">Save Session</button>
+                </form>
+            </section>
+
+            <!-- Session Tracker Table -->
+            <section id="session-table-section">
+                <h2>Session Log</h2>
+                <table id="sessionTable">
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Dur. (h)</th>
+                            <th>Topic</th>
+                            <th>Rate</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tutor Buddy. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/tutor-buddy-home.js"></script>
+    <script src="scripts/sessions.js"></script>
+</body>
+
+</html>
