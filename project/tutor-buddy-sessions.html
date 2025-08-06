@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Buddy | Sessions</title>
+    <meta name="description" content="This page allows you to log, view, and edit your sessions as well as compute the balance.">
+    <meta name="author" content="Laureen Diaz">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Inter:opsz@14..32&family=Merriweather:opsz@18..144&display=swap"
+        rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/tutor-buddy.css" />
+    <link rel="icon" href="data:," />
+    
+    <!--JavaScript-->
+    <script src="scripts/tutor-buddy.js" defer></script>
+
+</head>
+<body class="sessions-page">
+    <header>
+        <div class="header-inner">
+            <div class="header-flex">
+                <div class="logo-tag-line">
+                    <img src="images/logo.webp" alt="Tutor Buddy Logo" loading="lazy" />
+                    <div class="tag-line-text">
+                        <h1>Tutor Buddy</h1>
+                        <p>Your smart helper.</p>
+                    </div>
+                </div>
+    
+                <nav class="nav-container">
+                    <button class="hamburger" aria-label="Toggle Menu">&#9776;</button>
+                    <ul class="nav-links">
+                        <li><a href="tutor-buddy-home.html">Home</a></li>
+                        <li><a href="tutor-buddy-sessions.html">Sessions</a></li>
+                        <li><a href="tutor-buddy-resources.html">Resources</a></li>
+                        <li><a href="tutor-buddy-contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <section id="form">
+                <h2>Add Session</h2>
+            
+                <form id="addSession">
+                    <fieldset>
+                        <legend>Session</legend>
+                        <label>Date* <input type="date" id="date" required></label>
+                        <label>Start Time* <input type="time" id="start" required></label>
+                        <label>End Time* <input type="time" id="end" required></label>
+                    </fieldset>
+            
+                    <fieldset>
+                        <legend>Student</legend>
+                        <label>Name* <input type="text" id="name" required></label>
+                        <label for="grade">Grade Level</label>
+                        <select name="grade" id="grade">
+                            <option value="">--Select the Grade Level--</option>
+                            <option value="k">Kindergarten</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="college">College</option>
+                        </select>
+                        <label for="subject">Subject</label>
+                        <select name="subject" id="subject">
+                            <option value="">--Select the Subject--</option>
+                            <option value="language">Language</option>
+                            <option value="english">English</option>
+                            <option value="filipino">Filipino</option>
+                            <option value="math">Mathematics</option>
+                            <option value="algebra">Algebra</option>
+                            <option value="calculus">Calculus</option>
+                            <option value="geometry">Geometry</option>
+                            <option value="probability">Probability</option>
+                            <option value="stat">Statistics</option>
+                            <option value="trigo">Trigonometry</option>
+                            <option value="science">Science</option>
+                            <option value="bio">Biology</option>
+                            <option value="chem">Chemistry</option>
+                            <option value="geol">Geology</option>
+                            <option value="physics">Physics</option>
+                            <option value="socsci">Social Science</option>
+                            <option value="geog">Geography</option>
+                            <option value="history">History</option>
+                        </select>
+                        <label>Topic <input type="text" id="topic"></label>
+                        <label for="feedback">Feedback</label>
+                        <textarea name="feedback" id="feedback" placeholder="Type your feedback here."></textarea>
+                    </fieldset>
+            
+                    <fieldset>
+                        <legend>Payment Details</legend>
+                        <label>Hourly Rate <input type="number" id="rate" required></label>
+                        <label for="mode">Mode of Payment</label>
+                        <select name="mode" id="mode">
+                            <option value="">--Select Mode of Payment--</option>
+                            <option value="cash">Cash</option>
+                            <option value="cheque">Cheque</option>
+                            <option value="ewallet">e-Wallet</option>
+                            <option value="bank">Bank Transfer</option>
+                        </select>
+                    </fieldset>
+                    <button type="submit" class="button" id="save">Save Session</button>
+                </form>
+            </section>
+            
+            <section id="filters">
+                <label>Student: <input type="text" id="filter-student" placeholder="Name"></label>
+                <label>Date From: <input type="date" id="filter-date-from"></label>
+                <label>Date To: <input type="date" id="filter-date-to"></label>
+                <label>Time From: <input type="time" id="filter-time-from"></label>
+                <label>Time To: <input type="time" id="filter-time-to"></label>
+            </section>
+
+            <section id="bulk-action">
+                <button id="mark-all-paid" class="button">Mark Filtered as Paid</button>
+            </section>
+
+            <section id="summary"></section>
+            
+            
+            <section id="table">
+                <h2>Logged Sessions</h2>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th>Name</th>
+                            <th>Grade Level</th>
+                            <th>Subject</th>
+                            <th>Topic</th>
+                            <th>Feedback</th>
+                            <th>Duration</th>
+                            <th>Hourly Rate</th>
+                            <th>Fee</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+            
+                    <tbody>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tutor Buddy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
