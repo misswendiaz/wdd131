@@ -689,6 +689,10 @@ footer {
     font-family: var(--font-body);
 }
 
+.contact-page .form-row input, select {
+    text-align: center;
+}
+
 .contact-page .form-row button {
     background-color: var(--primary-color);
     color: white;
