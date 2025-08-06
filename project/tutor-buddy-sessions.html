@@ -109,28 +109,33 @@
                     </fieldset>
             
                     <fieldset>
-                        <legend>Payment Details</legend>
+                        <legend>Billing Details</legend>
                         <label>Hourly Rate <input type="number" id="rate" required></label>
-                        <label for="mode">Mode of Payment</label>
-                        <select name="mode" id="mode">
-                            <option value="">--Select Mode of Payment--</option>
-                            <option value="cash">Cash</option>
-                            <option value="cheque">Cheque</option>
-                            <option value="ewallet">e-Wallet</option>
-                            <option value="bank">Bank Transfer</option>
-                        </select>
+                        <label>Discount (%) <input type="number" id="discount" min="0" max="100" value="0"></label>
                     </fieldset>
                     <button type="submit" class="button" id="save">Save Session</button>
                 </form>
             </section>
             
             <section id="filters">
-                <label>Student: <input type="text" id="filter-student" placeholder="Name"></label>
-                <label>Date From: <input type="date" id="filter-date-from"></label>
-                <label>Date To: <input type="date" id="filter-date-to"></label>
-                <label>Time From: <input type="time" id="filter-time-from"></label>
-                <label>Time To: <input type="time" id="filter-time-to"></label>
+                <h3 class="filters-heading">Session Filters</h3>
+                <div class="filter-name">
+                    <label>Student: <input type="text" id="filter-student" placeholder="Name"></label>
+                </div>
+                <div class="filter-dates">
+                    <label>Date From: <input type="date" id="filter-date-from"></label>
+                    <label>Date To: <input type="date" id="filter-date-to"></label>
+                </div>
+                <div class="filter-times">
+                    <label>Time From: <input type="time" id="filter-time-from"></label>
+                    <label>Time To: <input type="time" id="filter-time-to"></label>
+                </div>
+                <div class="filter-actions">
+                    <button id="apply-filters">Apply Filters</button>
+                    <button id="clear-filters">Clear Filters</button>
+                </div>
             </section>
+
 
             <section id="bulk-action">
                 <button id="mark-all-paid" class="button">Mark Filtered as Paid</button>
@@ -157,6 +162,8 @@
                             <th>Hourly Rate</th>
                             <th>Fee</th>
                             <th>Status</th>
+                            <th>Date Paid</th>
+                            <th>Payment Mode</th>
                             <th>Actions</th>
                         </tr>
                     </thead>

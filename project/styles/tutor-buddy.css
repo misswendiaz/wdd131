@@ -112,24 +112,28 @@ header {
     cursor: pointer;
     display: none;
 }
-
 .nav-links {
     display: flex;
-    list-style: none;
-    gap: 1.25rem;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
 }
 
 .nav-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 40px;
+    padding: 0 0.5rem;
+    text-align: center;
     color: var(--primary-color);
     text-decoration: none;
-    padding: 0.5rem 1rem;
     font-weight: bold;
     border: 1px solid var(--primary-color);
     border-radius: var(--border-radius);
     transition: background-color var(--transition), color var(--transition);
-    width: 140px;
-    text-align: center;
 }
 
 .nav-links a:hover {
@@ -285,7 +289,7 @@ footer {
 }
 
 /* ============================
-   6. Sessions Page (Scoped Styles)
+   6. Sessions Page
    ============================ */
 .sessions-page #form {
     margin: 2rem auto;
@@ -324,6 +328,15 @@ footer {
     display: block;
 }
 
+.sessions-page input[type="text"],
+.sessions-page input[type="number"],
+.sessions-page input[type="date"],
+.sessions-page input[type="time"],
+.sessions-page select {
+    text-align: center;
+}
+
+
 .sessions-page #form input:required {
     border-bottom: solid 8px var(--accent-color);
 }
@@ -334,9 +347,111 @@ footer {
 
 /* Filters section */
 .sessions-page #filters {
-    display: block;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
     gap: 1rem;
-    margin: 2rem;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--bg-surface);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.sessions-page #filters .filters-heading {
+    grid-row: 1;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.sessions-page #filters .filter-name {
+    grid-row: 2;
+}
+
+.sessions-page #filters .filter-dates {
+    grid-row: 3;
+    display: flex;
+    gap: 1rem;
+}
+
+.sessions-page #filters .filter-times {
+    grid-row: 4;
+    display: flex;
+    gap: 1rem;
+}
+
+.sessions-page #filters label {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 min-content;
+}
+
+.sessions-page #filters input,
+.sessions-page #filters select {
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    width: 100%;
+}
+
+.sessions-page #filters h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.sessions-page .filter-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.sessions-page .filter-actions button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color var(--transition);
+}
+
+.sessions-page .filter-actions button:hover {
+    background-color: var(--info-color)
+}
+
+/* Bulk action button aligned on same row as filters or below */
+.sessions-page #bulk-action {
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.sessions-page #bulk-action button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+.sessions-page #bulk-action button:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.sessions-page #summary {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding-top: 0.5rem;
 }
 
 /* Medium screen better spacing for filters */
@@ -388,6 +503,62 @@ footer {
 .sessions-page #table td:nth-child(7),
 .sessions-page #table td:nth-child(8) {
     white-space: normal;
+}
+
+.sessions-page #table td.feedback-cell {
+    max-width: 200px;
+    height: 100%;
+    white-space: normal;
+    overflow: hidden;
+    padding-right: 0.25rem;
+    text-align: left;
+}
+
+.sessions-page #table td.feedback-cell>div {
+    max-height: 5.5rem;
+    /* Controls visible height inside the cell */
+    overflow-y: auto;
+    /* Scrolls only when content is taller */
+    padding-right: 0.25rem;
+    word-break: break-word;
+}
+
+/* Sets a fixed width on the feedback column header */
+.sessions-page #table th.feedback-cell {
+    width: 12%;
+    /* Adjust width to fit design */
+}
+
+/* Allocate columns for Date Paid & Mode of Payment */
+.sessions-page #table th:nth-child(12),
+.sessions-page #table td:nth-child(12) {
+    width: 8%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.sessions-page #table th:nth-child(13),
+.sessions-page #table td:nth-child(13) {
+    width: 8%;
+    text-align: center;
+}
+
+/* Adjust table to include new Date Paid & Payment Mode columns */
+.sessions-page #table th:nth-child(13),
+.sessions-page #table td:nth-child(13) {
+    width: 8%;
+    text-align: center;
+}
+
+.sessions-page #table th:nth-child(14),
+.sessions-page #table td:nth-child(14) {
+    width: 10%;
+    text-align: center;
+}
+
+/* Ensure status button remains centered */
+.sessions-page #table td:nth-child(12) button.toggle-paid-btn {
+    margin: 0 auto;
 }
 
 /* Edit/Delete button styling */
