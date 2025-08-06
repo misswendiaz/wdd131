@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutor Buddy | Contact Us</title>
+    <meta name="description" content="Contact Tutor Buddy for questions, feedback, or feature requests." />
+    <link rel="stylesheet" href="styles/tutor-buddy.css" />
+</head>
+
+<body class="contact-page">
+
+    <!-- ================================ -->
+    <!-- Header & Navigation -->
+    <!-- ================================ -->
+    <header>
+        <div class="header-inner">
+            <div class="header-flex">
+                <div class="logo-tag-line">
+                    <img src="images/logo.webp" alt="Tutor Buddy Logo" loading="lazy" />
+                    <div class="tag-line-text">
+                        <h1>Tutor Buddy</h1>
+                        <p>Your smart helper.</p>
+                    </div>
+                </div>
+                <nav class="nav-container">
+                    <button class="hamburger" aria-label="Toggle Menu">&#9776;</button>
+                    <ul class="nav-links">
+                        <li><a href="tutor-buddy-home.html">Home</a></li>
+                        <li><a href="tutor-buddy-sessions.html">Sessions</a></li>
+                        <li><a href="tutor-buddy-resources.html">Resources</a></li>
+                        <li><a href="tutor-buddy-contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- ================================ -->
+        <!-- Contact Form Section -->
+        <!-- ================================ -->
+        <section class="intro">
+            <h2>Contact Tutor Buddy</h2>
+            <p>Reach out to us! Select a category below and submit your message.</p>
+        </section>
+
+        <section class="contact-form-area">
+            <form id="contactForm" action="#" method="POST">
+                <!-- Name & Email -->
+                <div class="form-row">
+                    <label for="name">Name*</label>
+                    <input type="text" id="name" name="name" required maxlength="100" />
+                </div>
+                <div class="form-row">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required maxlength="100" />
+                </div>
+
+                <!-- Category Selector -->
+                <div class="form-row">
+                    <label for="category">Category*</label>
+                    <select id="category" name="category" required>
+                        <option value="">--Select Category--</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="feature-suggestion">Feature Suggestion</option>
+                        <option value="feature-enhancement">Feature Enhancement</option>
+                        <option value="feature-removal">Feature Removal</option>
+                        <option value="message">Message</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- "Other" Category Text Input -->
+                <div class="form-row hidden" id="category-other-container">
+                    <label for="category-other">Please specify:</label>
+                    <input type="text" id="category-other" name="category-other" maxlength="150" />
+                </div>
+
+                <!-- Subject & Message -->
+                <div class="form-row">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" maxlength="150" />
+                </div>
+                <div class="form-row">
+                    <label for="message">Message*</label>
+                    <textarea id="message" name="message" rows="6" required maxlength="1000"></textarea>
+                </div>
+
+                <!-- Submit button -->
+                <div class="form-row">
+                    <button type="submit" class="button">Send Message</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- ================================ -->
+        <!-- Contact Info Section -->
+        <!-- ================================ -->
+        <section class="contact-info">
+            <h3>Other Ways to Reach Us</h3>
+            <p>Email: <a href="mailto:info@tutorbuddy.com">info@tutorbuddy.com</a></p>
+            <p>Phone (Philippines): <a href="tel:+639171234567">+63 917 123 4567</a></p>
+        </section>
+
+        <!-- ================================ -->
+        <!-- FAQ Section -->
+        <!-- ================================ -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+        
+            <div class="faq-item">
+                <h3>What is Tutor Buddy?</h3>
+                <p>Tutor Buddy is a lightweight web app designed to help tutors log, manage, and compute session data—including
+                    date, duration, rate, and payment balance.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Who is Tutor Buddy for?</h3>
+                <p>It’s ideal for individual tutors or small tutoring services who want a simple and offline-capable way to
+                    track sessions without relying on spreadsheets.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do I need to create an account?</h3>
+                <p>No account or login is required—data is stored locally in your browser's localStorage. This makes it private
+                    and accessible even offline.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I log a session?</h3>
+                <p>Go to the Sessions page, fill in the required fields (date, times, subject, etc.), and click “Save Session.”
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I edit a session after logging it?</h3>
+                <p>Yes! Click the “Edit” button next to any session in the table to update details or correct mistakes. After
+                    editing, click “Update Session.”</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I delete a session?</h3>
+                <p>Yes — click “Delete” on a session row. You can undo the deletion within a short time period using the
+                    notification prompt.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I mark multiple sessions as paid?</h3>
+                <p>Use the session filters to select sessions, then click the “Mark Filtered as Paid” button to process them at
+                    once.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I request a new feature?</h3>
+                <p>Absolutely! Choose “Feature Suggestion” or “Feature Enhancement” in the Contact form and describe what you'd
+                    like to see—your input helps us improve.</p>
+            </div>
+        </section>
+
+
+    <!-- ================================ -->
+    <!-- Footer -->
+    <!-- ================================ -->
+    <footer>
+        <p>&copy; 2025 Tutor Buddy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').onclick = () =>
+            document.querySelector('.nav-links').classList.toggle('show');
+
+        // Toggle 'Other' category input
+        const catSelect = document.getElementById('category');
+        const catOtherContainer = document.getElementById('category-other-container');
+        catSelect.addEventListener('change', () => {
+            if (catSelect.value === 'other') {
+                catOtherContainer.classList.remove('hidden');
+            } else {
+                catOtherContainer.classList.add('hidden');
+                document.getElementById('category-other').value = '';
+            }
+        });
+
+        // Form submission handler (demo-only)
+        document.getElementById('contactForm').addEventListener('submit', e => {
+            e.preventDefault();
+            alert('Thanks for reaching out! We will respond within 1–2 business days.');
+            e.target.reset();
+            catOtherContainer.classList.add('hidden');
+        });
+    </script>
+</body>
+
+</html>

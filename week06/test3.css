@@ -112,6 +112,7 @@ header {
     cursor: pointer;
     display: none;
 }
+
 .nav-links {
     display: flex;
     flex-wrap: wrap;
@@ -343,22 +344,6 @@ footer {
 
 .sessions-page #form input:required:valid {
     border-bottom: solid 8px var(--secondary-color);
-}
-
-.hidden {
-    display: none;
-}
-
-#other {
-    margin-top: 0.5rem;
-}
-
-#other-specifics {
-    width: 100%;
-    padding: 0.4rem;
-    box-sizing: border-box;
-    border-radius: var(--border-radius);
-    border: 1px solid #ccc;
 }
 
 /* Filters section */
@@ -709,30 +694,4 @@ footer {
     margin: 1rem auto;
     text-align: center;
     font-size: 0.95rem;
-}
-
-/* Hide by default */
-.hidden {
-    display: none;
-}
-
-/* FAQ section style */
-.contact-page .faq-section {
-    max-width: 700px;
-    margin: 2rem auto;
-}
-
-.contact-page .faq-item {
-    margin-bottom: 1rem;
-}
-
-.contact-page .faq-item h3 {
-    font-size: 1.1rem;
-    color: var(--primary-color);
-}
-
-.contact-page input, select, textarea {
-    min-height: 44px;
-    display: block;
-    border-radius: var(--border-radius);
 }
