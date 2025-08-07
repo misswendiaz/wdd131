@@ -302,20 +302,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const params = new URLSearchParams(window.location.search);
 
-    params.forEach((value, key) => {
-        // Handle category-other: only show it as "Category" if filled
-        if (key === 'category-other') {
-            if (!value.trim()) return;
-            key = 'category';
-        }
+    const categoryOther = params.get('category-other')?.trim();
 
-        // Skip original 'category' if category-other was used
-        if (key === 'category' && params.get('category-other')?.trim()) return;
+    params.forEach((value, key) => {
+        // Skip category-other from appearing as its own entry
+        if (key === 'category-other') return;
+
+        // Replace 'category' with custom input if available
+        if (key === 'category' && categoryOther) {
+            value = categoryOther;
+        }
 
         const p = document.createElement("p");
         p.innerHTML = `<strong>${toTitleCase(key)}:</strong> ${value}`;
         summary.appendChild(p);
     });
+
 
 });
 
