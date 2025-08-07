@@ -28,14 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (contactForm) {
-            contactForm.addEventListener('submit', e => {
-                e.preventDefault();
-                alert('Thanks for reaching out! We will respond within 1–2 business days.');
-                contactForm.reset();
-                if (catOtherContainer) catOtherContainer.classList.add('hidden');
+            catSelect.addEventListener('change', () => {
+                if (catSelect.value === 'other') {
+                    catOtherContainer.classList.remove('hidden');
+                } else {
+                    catOtherContainer.classList.add('hidden');
+                    document.getElementById('category-other').value = '';
+                }
             });
         }
-    }
+
 
     if (document.getElementById('form')) initSessionsPage();
 });
