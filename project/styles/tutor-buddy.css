@@ -2,9 +2,9 @@
    1. Variables: Fonts & Colors
    ============================ */
 :root {
-    --font-body: 'Inter', sans-serif;
-    --font-heading: 'Merriweather', serif;
-    --font-mono: 'Fira Mono', monospace;
+    --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+    --font-mono: 'Fira Mono', 'Courier New', Courier, monospace;
 
     --primary-color: #2a3780;
     --secondary-color: #8BC34A;
