@@ -9,11 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------
-    // Contact Page: Toggle "Other" Category
+    // Contact Page
     // -------------------------------
     if (document.querySelector('.contact-page')) {
         const catSelect = document.getElementById('category');
         const catOtherContainer = document.getElementById('category-other-container');
+        const contactForm = document.getElementById('contactForm');
 
         if (catSelect && catOtherContainer) {
             catSelect.addEventListener('change', () => {
@@ -25,8 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-    }
 
+        if (contactForm) {
+            contactForm.addEventListener('submit', e => {
+                e.preventDefault();
+                alert('Thanks for reaching out! We will respond within 1–2 business days.');
+                contactForm.reset();
+                if (catOtherContainer) catOtherContainer.classList.add('hidden');
+            });
+        }
+    }
 
     if (document.getElementById('form')) initSessionsPage();
 });
