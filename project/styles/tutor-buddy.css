@@ -6,14 +6,14 @@
     --font-heading: 'Merriweather', serif;
     --font-mono: 'Fira Mono', monospace;
 
-    --primary-color: #3F51B5;
+    --primary-color: #2a3780;
     --secondary-color: #8BC34A;
-    --error-color: #F44336;
+    --error-color: #f5873e;
     --info-color: #009688;
     --accent-color: #FFCA28;
 
-    --text-primary: #333333;
-    --text-secondary: #666666;
+    --text-primary: #111111;
+    --text-secondary: #333333;
 
     --bg-main: #F5F5F5;
     --bg-surface: #FFFFFF;
@@ -201,11 +201,11 @@ main.homepage {
     border-radius: var(--border-radius);
     text-decoration: none;
     font-size: 1rem;
-    color: white;
 }
 
 #cta1 {
     background-color: var(--secondary-color);
+    color: var(--text-primary);
 }
 
 #cta1:hover {
@@ -213,7 +213,8 @@ main.homepage {
 }
 
 #cta2 {
-    background-color: var(--info-color);
+    background-color: var(--accent-color);
+    color: var(--text-primary);
 }
 
 #cta2:hover {
@@ -308,7 +309,7 @@ footer {
 }
 
 .sessions-page #form legend {
-    color: var(--info-color);
+    color: var(--text-secondary);
     padding: 0 0.5rem;
 }
 
@@ -427,7 +428,7 @@ footer {
 
 .sessions-page .filter-actions button {
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--text-primary);
     border: none;
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
@@ -589,7 +590,7 @@ footer {
 .sessions-page button.toggle-paid-btn {
     margin: 0 0.25rem;
     padding: 0.3rem 0.6rem;
-    color: white;
+    color: var(--text-primary);
     border: none;
     border-radius: var(--border-radius);
     transition: background-color var(--transition);
