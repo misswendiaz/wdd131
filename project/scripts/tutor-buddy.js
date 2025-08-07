@@ -37,10 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
+    }
 
 
     if (document.getElementById('form')) initSessionsPage();
 });
+
 
 function initSessionsPage() {
     // -------------------------------
@@ -301,10 +303,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
 
     params.forEach((value, key) => {
+        // Handle category-other: only show it as "Category" if filled
+        if (key === 'category-other') {
+            if (!value.trim()) return;
+            key = 'category';
+        }
+
+        // Skip original 'category' if category-other was used
+        if (key === 'category' && params.get('category-other')?.trim()) return;
+
         const p = document.createElement("p");
         p.innerHTML = `<strong>${toTitleCase(key)}:</strong> ${value}`;
         summary.appendChild(p);
     });
+
 });
 
 // Helper function to convert snake/kebabCase or camelCase to Title Case
