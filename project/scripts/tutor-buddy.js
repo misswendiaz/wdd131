@@ -222,7 +222,7 @@ function initSessionsPage() {
     };
 
     // -------------------------------
-    // 5. Bulk Paid/Unpaid Toggle (keep prompt for now)
+    // 5. Bulk Paid/Unpaid Toggle
     // -------------------------------
     if (bulkToggleBtn) {
         bulkToggleBtn.addEventListener('click', () => {
