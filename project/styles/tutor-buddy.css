@@ -741,3 +741,39 @@ footer {
     display: block;
     border-radius: var(--border-radius);
 }
+
+/* ============================
+   Contact Confirmation Page
+   ============================ */
+.confirmation-page main {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: var(--bg-surface);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.confirmation-page h1 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#entries {
+    padding: 1rem;
+}
+
+#entries p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#entries strong {
+    display: inline-block;
+    min-width: 120px;
+    color: var(--text-primary);
+}

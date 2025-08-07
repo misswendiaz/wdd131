@@ -286,3 +286,31 @@ function initSessionsPage() {
     // -------------------------------
     refreshTable();
 }
+
+
+
+// -------------------------------
+// 13. Contact Form Entries Display
+// -------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+    const summary = document.getElementById("entries");
+    if (!summary) return; // Exit if not on confirmation page
+
+    const params = new URLSearchParams(window.location.search);
+
+    params.forEach((value, key) => {
+        const p = document.createElement("p");
+        p.innerHTML = `<strong>${toTitleCase(key)}:</strong> ${value}`;
+        summary.appendChild(p);
+    });
+});
+
+// Helper function to convert snake/kebabCase or camelCase to Title Case
+function toTitleCase(str) {
+    return str
+        .replace(/[-_]/g, ' ')                       // snake_case or kebab-case to space
+        .replace(/([a-z])([A-Z])/g, '$1 $2')         // camelCase to space
+        .replace(/\w\S*/g, word =>                   // capitalize each word
+            word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+        );
+}
